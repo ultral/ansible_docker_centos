@@ -1,0 +1,22 @@
+namespace: "ultral"
+name: "ansible_docker_centos"
+version: "0.1"
+description: "Ansible role for installing docker on CentOS"
+
+authors:
+  - "Lev Goncharov <lev@goncharov.xyz>"
+
+repository: "https://github.com/ultral/ansible_docker_centos"
+documentation: "https://github.com/ultral/ansible_docker_centos/blob/master/README.md"
+homepage: "https://github.com/ultral/ansible_docker_centos"
+issues: "https://github.com/ultral/ansible_docker_centos/issues"
+
+dependencies: {}
+
+readme: "README.md"
+license: "MIT"
+license_file: "LICENSE"
+
+tags:
+  - "centos"
+  - "docker"

@@ -1,2 +1,2 @@
-# ansible-docker-centos
-ansible role for installing docker on centos
+# ansible_docker_centos
+Ansible role for installing docker on CentOS
