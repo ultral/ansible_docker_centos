@@ -10,3 +10,6 @@ install:
 script:
   - molecule --debug lint
   - molecule --debug syntax
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
