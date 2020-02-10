@@ -14,12 +14,6 @@
     state: present
     update_cache: true
 
-- name: Docker-compose is installed
-  yum:
-    name: docker-compose
-    state: present
-    enablerepo: epel-testing
-
 - name: enable ipv4 routing
   sysctl:
     name: net.ipv4.ip_forward
