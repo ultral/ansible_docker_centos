@@ -2,10 +2,10 @@
 language: python
 
 python:
-  - "2.7"
+  - "3.6"
 
 install:
-  - pip install ansible ansible-lint molecule
+  - pip install ansible ansible-lint molecule[docker]
 
 script:
   - molecule --debug lint
