@@ -13,12 +13,16 @@
     name: "{{ docker_software }}"
     state: present
     update_cache: true
+  retries: 10
+  delay: 5
 
 - name: Docker-compose is installed
   yum:
     name: docker-compose
     state: present
     enablerepo: epel-testing
+  retries: 10
+  delay: 5
 
 - name: enable ipv4 routing
   sysctl:
