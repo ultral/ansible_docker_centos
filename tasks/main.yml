@@ -7,11 +7,14 @@
     baseurl: https://download.docker.com/linux/centos/$releasever/$basearch/stable
     gpgkey: https://download.docker.com/linux/centos/gpg
     enabled: true
+  when:
+    - ansible_os_family in ["Rocky", "OracleLinux"]
 
 - name: RPMs for docker are installed
   yum:
     name: "{{ docker_software }}"
     state: present
+    skip_broken: true
     update_cache: true
   retries: 10
   delay: 5
