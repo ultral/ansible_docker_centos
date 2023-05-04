@@ -2,5 +2,3 @@
 docker_software:
   - device-mapper-persistent-data
   - lvm2
-  - docker-ce
-  - docker
