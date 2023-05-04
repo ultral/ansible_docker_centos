@@ -30,7 +30,7 @@
   retries: 10
   delay: 5
   when:
-    - ansible_os_family in ["Amazon"]
+    - ansible_distribution in ["Amazon"]
 
 - name: enable ipv4 routing
   sysctl:
