@@ -18,5 +18,4 @@ license: "MIT"
 license_file: "LICENSE"
 
 tags:
-  - "centos"
-  - "docker"
+  - "infrastructure"
