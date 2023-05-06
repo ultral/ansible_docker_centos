@@ -1,0 +1,28 @@
+name: Test role
+on: [push, pull_request]
+
+jobs:
+  gitlab_runner:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario:
+          - default
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: "${{ github.repository }}"
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+          cache: 'pip' # caching pip dependencies
+      - name: install ansible
+        run: pip install -r "${{ github.repository }}/requirements.txt"
+      - name: install dependencies
+        run: ansible-galaxy install -r  "${{ github.repository }}/requirements.yml
+      - name: run molecule
+        run: molecule --debug test
+        env:
+          ANSIBLE_FORCE_COLOR: True

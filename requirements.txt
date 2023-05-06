@@ -1,1 +1,8 @@
-ansible>=2.2.0
+Jinja2==3.1.2
+ansible-core==2.13.8
+ansible-lint==6.12.2
+molecule[docker,lint]==4.0.4
+docker
+pyOpenSSL
+rich
+yamllint==1.29.0
