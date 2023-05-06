@@ -1,3 +1,4 @@
+---
 galaxy_info:
   namespace: ultral
   role_name: ansible_docker_centos

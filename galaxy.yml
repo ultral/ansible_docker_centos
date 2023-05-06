@@ -1,3 +1,4 @@
+---
 namespace: ultral
 name: ansible_docker_centos
 version: "1.0.0"
