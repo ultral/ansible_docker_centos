@@ -1,3 +1,4 @@
+---
 name: Test role
 on: [push, pull_request]
 
@@ -17,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8'
-          cache: 'pip' # caching pip dependencies
+          cache: 'pip'  # caching pip dependencies
       - name: install ansible
         run: pip install -r "${{ github.repository }}/requirements.txt"
       - name: install dependencies
@@ -26,4 +27,4 @@ jobs:
         run: molecule --debug test
         working-directory: "${{ github.repository }}"
         env:
-          ANSIBLE_FORCE_COLOR: True
+          ANSIBLE_FORCE_COLOR: true
