@@ -10,6 +10,7 @@ lint: |
 platforms:
   - name: instance
     image: ultral/docker_centos_ansible_tests:latest
+    pull: true
     pre_build_image: true
     privileged: true
     command: /sbin/init
