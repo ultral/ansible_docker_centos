@@ -24,5 +24,6 @@ jobs:
         run: ansible-galaxy install -r  "${{ github.repository }}/requirements.yml"
       - name: run molecule
         run: molecule --debug test
+        working-directory: "${{ github.repository }}"
         env:
           ANSIBLE_FORCE_COLOR: True
