@@ -1,7 +1,7 @@
 ---
 ---
 galaxy_info:
-  namespace: iac
+  namespace: ultral
   role_name: ansible_docker_centos
   author: Lev Goncharov <lev@goncharov.xyz>
   description: Ansible role for installing docker on CentOS
