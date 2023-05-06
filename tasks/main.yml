@@ -33,7 +33,7 @@
     - ansible_distribution in ["Amazon"]
 
 - name: Enable ipv4 routing
-  sysctl:
+  ansible.posix.sysctl:
     name: net.ipv4.ip_forward
     value: 1
     sysctl_set: true
@@ -46,3 +46,4 @@
     enabled: true
     daemon_reload: true
     name: docker.service
+  when: docker_start

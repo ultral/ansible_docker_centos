@@ -2,3 +2,4 @@
 docker_software:
   - device-mapper-persistent-data
   - lvm2
+docker_start: true
