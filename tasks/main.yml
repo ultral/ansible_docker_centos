@@ -1,6 +1,6 @@
 ---
 - name: Repository docker-ce-stable is presented
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: docker-ce-stable
     description: docker-ce-stable
     file: docker-ce-stable
@@ -11,7 +11,7 @@
     - ansible_os_family in ["Rocky", "OracleLinux"]
 
 - name: Install docker-ce
-  yum:
+  ansible.builtin.yum:
     name: docker-ce
     state: present
     skip_broken: true
@@ -22,7 +22,7 @@
     - ansible_os_family in ["Rocky", "OracleLinux"]
 
 - name: Install docker
-  yum:
+  ansible.builtin.yum:
     name: docker
     state: present
     skip_broken: true
@@ -32,7 +32,7 @@
   when:
     - ansible_distribution in ["Amazon"]
 
-- name: enable ipv4 routing
+- name: Enable ipv4 routing
   sysctl:
     name: net.ipv4.ip_forward
     value: 1
@@ -41,7 +41,7 @@
     reload: true
 
 - name: Docker service is started
-  systemd:
+  ansible.builtin.systemd:
     state: started
     enabled: true
     daemon_reload: true
