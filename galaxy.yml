@@ -1,5 +1,5 @@
-namespace: "ultral"
-name: "ansible_docker_centos"
+namespace: ultral
+name: ansible_docker_centos
 version: "1.0.0"
 description: "Ansible role for installing docker on CentOS"
 
@@ -13,9 +13,10 @@ issues: "https://github.com/ultral/ansible_docker_centos/issues"
 
 dependencies: {}
 
-readme: "README.md"
-license: "MIT"
-license_file: "LICENSE"
+readme: README.md
+license:
+  - MIT
+license_file: LICENSE
 
 tags:
   - "infrastructure"

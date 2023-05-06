@@ -1,5 +1,5 @@
 ==============================
-community.vmware Release Notes
+ultral.ansible_docker_centos Release Notes
 ==============================
 
 .. contents:: Topics
