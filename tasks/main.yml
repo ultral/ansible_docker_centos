@@ -28,6 +28,7 @@
     state: present
     skip_broken: true
     update_cache: true
+    use_backend: dnf4
   retries: 10
   delay: 5
   when:
