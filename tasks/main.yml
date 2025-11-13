@@ -20,12 +20,11 @@
     - ansible_distribution not in ["Amazon"]
 
 - name: Install docker
-  ansible.builtin.yum:
+  ansible.builtin.package:
     name: docker
     state: present
     skip_broken: true
     update_cache: true
-    use_backend: yum
   retries: 10
   delay: 5
   when:
